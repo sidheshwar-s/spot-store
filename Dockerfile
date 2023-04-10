@@ -24,6 +24,4 @@ ENV MONGO_URI=mongodb://mongo:yS5DHpuLdjGwr5MIiEYY@containers-us-west-128.railwa
 
 ENV JWT_SECRET_KEY=secret
 
-RUN apt-get update && apt-get install -y nodejs-legacy
-
 CMD ["npm", "run", "dev" ]
