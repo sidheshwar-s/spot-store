@@ -2,21 +2,13 @@ FROM node:16
 
 WORKDIR /spot-store
 
-COPY package*.json ./
-
-RUN npm install 
-
-WORKDIR /spot-store/client
-
-RUN npm install 
-
-WORKDIR /spot-store
-
 COPY . .
 
-EXPOSE 3000
+RUN npm install 
 
 WORKDIR /spot-store/client
+
+RUN npm run init
 
 ENV MONGO_URI=mongodb://mongo:yS5DHpuLdjGwr5MIiEYY@containers-us-west-128.railway.app:5967
 
