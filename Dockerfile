@@ -16,4 +16,10 @@ ENV JWT_SECRET_KEY=secret
 
 ENV PORT=8000
 
-CMD ["npm", "run", "dev" ]
+WORKDIR /spot-store
+
+RUN npm start
+
+WORKDIR /spot-store/client
+
+CMD ["npm", "start"]
