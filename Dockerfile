@@ -14,4 +14,8 @@ ENV MONGO_URI=mongodb://mongo:yS5DHpuLdjGwr5MIiEYY@containers-us-west-128.railwa
 
 ENV JWT_SECRET_KEY=secret
 
+ENV HOST=my.devserver.com
+
+ENV PORT=8000
+
 CMD ["npm", "run", "dev" ]
